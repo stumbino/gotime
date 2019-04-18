@@ -1,18 +1,12 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
-class Header extends React.Component {
-   
-    render() {
-        console.log(this.props);
-        return(
+const Header = () => {
+    return (
         <div>
-            <h1>{this.props.title}</h1>
+            <h1>GoTime</h1>
+            <p>On Schedule and On Time</p>
         </div>
-        )
-    }
-}
+    );
+};
 
-// export default Header;
 export {Header as default};
-
