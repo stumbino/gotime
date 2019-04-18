@@ -16,28 +16,22 @@
     "axios": "^0.18.0",
     "babel-polyfill": "^6.26.0",
     "express": "^4.16.3",
-<<<<<<< HEAD
     "https": "^1.0.0",
-=======
     "history": "^4.9.0",
     "moment": "^2.24.0",
->>>>>>> ad51fab36be80ff9cf03f43fee5bf08df5d98c2d
     "mongodb": "^3.2.3",
     "mongoose": "^5.5.2",
     "node-sass": "^4.11.0",
     "react": "^16.8.6",
     "react-dates": "^20.1.0",
     "react-dom": "^16.5.2",
-<<<<<<< HEAD
     "request": "^2.88.0",
-=======
     "react-redux": "^7.0.2",
     "react-router-dom": "^5.0.0",
     "react-scripts": "2.1.8",
     "react-time-picker": "^3.5.1",
     "redux": "^4.0.1",
     "redux-thunk": "^2.3.0",
->>>>>>> ad51fab36be80ff9cf03f43fee5bf08df5d98c2d
     "sass-loader": "^7.1.0",
     "validator": "^10.11.0"
   },
