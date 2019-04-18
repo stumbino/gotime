@@ -1,9 +1,8 @@
 const express = require('express');
+require('./db/mongoose.js');
 const os = require('os');
-const User = require('./models/user')
 const Location = require('./models/location')
 const app = express();
-const Task = require('./models/task')
 //const axios = require('axios')
 app.use(express.json())
 app.use(express.static('dist'));
@@ -27,15 +26,14 @@ app.post('/api/location', (req, res) => {
         res.send(e);
     })
 })
-// app.get('/api/getLocation/:startDate', (req, res) => {
-//     //const location = new Location(req.body)
-//     console.log(req.params.startDate);
-//     const location = new Location(req.body)
-//     location.findOne({"start": ISODate(req.params.startDate.toString())}).then((data) => {
-//         res.send(data);
-//     })
-//     //location.find({}).then()
-// })
+app.get('/api/getLocation', (req, res) => {
+    Location.find({}).then((data) => {
+        res.send(data);
+    }).catch((e) => {
+        res.send(e);
+    })
+    //location.find({}).then()
+});
 
 // app.get('/api/location', (req, res) => {
 //     axios.get('https://api.predicthq.com/v1/events/?location_around.origin=40.730610,-73.935242', {'headers': {'Accept': 'application/json', 'Authorization':'Bearer ofv44QQlFBvSqNxKpismQaB89IdrsZ0'}})
