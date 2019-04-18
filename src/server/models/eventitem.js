@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 const validator = require('validator')
-const Location = mongoose.model('Location', {
+const EventItem = mongoose.model('Events', {
     id: {
        type: String
     },
@@ -30,8 +30,4 @@ const Location = mongoose.model('Location', {
     }
 });
 
-// const me = new User({
-//     name: 'Billy',
-//     age: 24
-// })
-module.exports = Location;
+module.exports = EventItem;
