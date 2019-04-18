@@ -5,6 +5,7 @@ import TimePicker from 'react-time-picker';
 import {SingleDatePicker} from 'react-dates';
 import moment from 'moment';
 import {history} from '../routers/AppRouter';
+import '../styles/eventform.css';
 
 export class EventForm extends React.Component {
     constructor(props){
@@ -88,7 +89,7 @@ export class EventForm extends React.Component {
 
     render(){
         return(
-            <form onSubmit={this.formSubmitted}>
+            <form onSubmit={this.formSubmitted} className="container">
                 <input type="text" value={this.state.title} onChange={this.onTitleChange} placeholder="Event Title" />
                 <input type="text" value={this.state.description} onChange={this.onDescriptionChange} placeholder="Event Description"/>
                 <input type="text" value={this.state.location} onChange={this.onLocationChange} placeholder="Event Location"/>

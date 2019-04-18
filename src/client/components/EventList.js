@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import EventListItem from './EventListItem';
 
 const EventList = (props) => {
+    console.log(props);
     return(
         <div>
             {props.events.length === 0 ? 

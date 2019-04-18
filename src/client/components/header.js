@@ -1,10 +1,14 @@
 import React from 'react';
+import '../styles/header.css';
+import {history} from '../routers/AppRouter';
 
+const logoClick = () => {
+    history.push('/');
+}
 const Header = () => {
     return (
-        <div>
-            <h1>GoTime</h1>
-            <p>On Schedule and On Time</p>
+        <div className="header">
+            <img className="logo" height="70vh" width="70vw" onClick={logoClick} src='/public/img/GoTimeLogoBlue.png' />
         </div>
     );
 };

@@ -4,11 +4,13 @@ import React from 'react';
 import {DateRangePicker} from 'react-dates';
 import moment from 'moment';
 import {Link} from 'react-router-dom';
+import '../styles/list.css';
 
 
 export class EventSummary extends React.Component {
     
     constructor(props) {
+        console.log(props);
         super(props);
         this.state = {
             searchValue: '',
@@ -37,7 +39,7 @@ export class EventSummary extends React.Component {
         return(
             <div>
                 <div>
-                    <p>Currently viewing 0 events</p>
+                    <p>Currently viewing {this.props.events.length} {this.props.events.length === 1 ? 'event' : 'events'} </p>
                 </div>
                 <div>
                     <p>Search</p>
@@ -56,7 +58,7 @@ export class EventSummary extends React.Component {
                        onFocusChange={(focusedInput) => this.setState({focused: focusedInput})} 
                     />
                 </div>
-                <Link to='/createEvent'>Create Event</Link>
+                <Link to='/createEvent' className="link">Create Event</Link>
             </div>
         );
     }

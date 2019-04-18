@@ -7,7 +7,7 @@ const DashboardPage = (props) => {
     console.log(props);
     return(
         <div>
-            <EventSummary />
+            <EventSummary events={props.events} />
             <EventList />
         </div>
     );

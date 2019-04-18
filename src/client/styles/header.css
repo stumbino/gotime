@@ -1,0 +1,17 @@
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: darkblue;
+    height: 20%;
+}
+
+.sectionHeader {
+    position: relative;
+    top: 0;
+    left: 40%;
+}
+
+.logo{
+    cursor: pointer;
+}

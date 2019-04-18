@@ -8,9 +8,7 @@ const eventsReducer = (state = defaultReducerState, action) =>{
                 action.event
             ];
         case 'SET_EVENTS':
-            return [
-                actions.events
-            ];
+            return action.events;
         default:
             return state;
     };

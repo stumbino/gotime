@@ -1,0 +1,25 @@
+.item {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    margin: 5px;
+}
+
+.link{
+    text-decoration: none;
+    background: grey;
+    color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 10px;
+
+}
+
+.link:hover{
+    background: darken(grey, 10%);
+}
+
+.itemContent{
+    margin-left: 5%;
+}

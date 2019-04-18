@@ -19,6 +19,9 @@ const EventItem = mongoose.model('Events', {
     date: {
         type: Date
     },
+    location: {
+        type: String
+    },
     organizer: {
         type: String
     }

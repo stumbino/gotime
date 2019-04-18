@@ -31,13 +31,30 @@ export const startAddEvent = ({title, description, location, startTime, category
 };
 
 export const startSetEvents = () => {
+    return (dispatch, getState) =>{
     axios.get('/api/getEvents')
     .then((response) => {
-        console.log(response);
+        const eventArray = [];
+        response.forEach((event) => {
+            const data = event.data;
+            const addedEvent = {
+                id: data._id,
+                title: data.title,
+                description: data.description,
+                location: data.location,
+                startTime: data.startTime,
+                date: data.date,
+                category: data.category,
+                organizer: data.organizer
+            };
+            eventArray.push(addEvent);
+        });
+        dispatch(setEvents(eventArray));
     })
     .catch((error) => {
         console.log(error);
     });
+    }
 }
 
 export const setEvents = (events) => {
@@ -45,7 +62,4 @@ export const setEvents = (events) => {
         type: 'SET_EVENTS',
         events
     };
-};
-
-export const setEvents = () => {
 };
