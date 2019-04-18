@@ -6,7 +6,11 @@ const eventsReducer = (state = defaultReducerState, action) =>{
             return [
                 ...state,
                 action.event
-            ]
+            ];
+        case 'SET_EVENTS':
+            return [
+                actions.events
+            ];
         default:
             return state;
     };

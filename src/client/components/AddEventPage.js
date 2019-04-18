@@ -1,6 +1,6 @@
 import React from 'react';
 import EventForm from './EventForm';
-import {addEvent} from '../actions/events';
+import {addEvent, startAddEvent} from '../actions/events';
 import {connect} from 'react-redux';
 const AddEventPage = (props) => {
     
@@ -17,7 +17,7 @@ const AddEventPage = (props) => {
 };
 
 const  mapPropsToDispatch = (dispatch) => ({
-    add: (event) =>  dispatch(addEvent(event))
+    add: (event) =>  dispatch(startAddEvent(event))
 });
 
 export default connect(undefined, mapPropsToDispatch)(AddEventPage);

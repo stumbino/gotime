@@ -80,7 +80,7 @@ export class EventForm extends React.Component {
                 startTime: this.state.startTime,
                 date: this.state.date,
                 category: this.state.category,
-                organizer: this.state.organizer,
+                organizer: this.state.organizer === '' ? 'Anonymous' : this.state.organizer,
             });
             history.push('/');
         }

@@ -16,20 +16,17 @@ const Location = mongoose.model('Location', {
     category: {
         type: String
     },
-    start:{
-        type: Date,
-    },
-    end:{
-        type: Date,
-    },
-    timezone:{
+    startTime:{
         type: String,
     },
-    lat:{ 
-        type: Number,
+    date: {
+        type: Date
     },
-    long:{
-        type: Number,
+    category: {
+        type: String
+    }, 
+    organizer: {
+        type: String
     }
 });
 
@@ -37,4 +34,5 @@ const Location = mongoose.model('Location', {
 //     name: 'Billy',
 //     age: 24
 // })
+
 module.exports = Location;
