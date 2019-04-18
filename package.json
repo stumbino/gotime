@@ -1,0 +1,20 @@
+{
+  "name": "Node_DELETE",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon src/index.js",
+    "mongodb": "/Users/User/mongodb/bin/mongod.exe --dbpath=/Users/User/mongodb-data",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "mongodb": "^3.2.3",
+    "mongoose": "^5.5.1",
+    "validator": "^10.11.0"
+  }
+}
